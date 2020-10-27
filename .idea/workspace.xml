@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="54899ddd-bc48-4787-9c89-f8ac861d9a5e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ProjectId" id="1iYA1KtDep11GxDNnEctQnrB7ED" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages/ecran" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/traitements" />
+      <recent name="$PROJECT_DIR$/img" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/pages" />
+      <recent name="$PROJECT_DIR$/Assets/user-action" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/ecran" />
+      <recent name="$PROJECT_DIR$/pages" />
+      <recent name="$PROJECT_DIR$/traitements" />
+      <recent name="$PROJECT_DIR$/includes" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54899ddd-bc48-4787-9c89-f8ac861d9a5e" name="Default Changelist" comment="" />
+      <created>1602073939679</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602073939679</updated>
+      <workItem from="1602073943511" duration="238000" />
+      <workItem from="1602074353839" duration="7427000" />
+      <workItem from="1602099421292" duration="86000" />
+      <workItem from="1602147954186" duration="1452000" />
+      <workItem from="1602170356170" duration="9647000" />
+      <workItem from="1602227604799" duration="7325000" />
+      <workItem from="1602243761673" duration="7186000" />
+      <workItem from="1602264179532" duration="23000" />
+      <workItem from="1602486720311" duration="1284000" />
+      <workItem from="1602488702916" duration="1142000" />
+      <workItem from="1602490242487" duration="18724000" />
+      <workItem from="1602573117100" duration="13300000" />
+      <workItem from="1602611295588" duration="343000" />
+      <workItem from="1602661645638" duration="7876000" />
+      <workItem from="1602676160524" duration="8507000" />
+      <workItem from="1602702464991" duration="142000" />
+      <workItem from="1602751605408" duration="2471000" />
+      <workItem from="1602830451048" duration="17148000" />
+      <workItem from="1602862228702" duration="17000" />
+      <workItem from="1603091723480" duration="17905000" />
+      <workItem from="1603178334580" duration="16198000" />
+      <workItem from="1603265462225" duration="13354000" />
+      <workItem from="1603353867876" duration="3572000" />
+      <workItem from="1603370962608" duration="5281000" />
+      <workItem from="1603437273000" duration="13820000" />
+      <workItem from="1603473806630" duration="57000" />
+      <workItem from="1603713626872" duration="13111000" />
+      <workItem from="1603786719496" duration="8552000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="214" key="#SQL_Dialects" timestamp="1602237616786">
+      <screen x="0" y="23" width="1280" height="710" />
+    </state>
+    <state x="0" y="214" key="#SQL_Dialects/0.23.1280.710@0.23.1280.710" timestamp="1602237616786" />
+    <state x="240" y="43" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602677213715">
+      <screen x="0" y="23" width="1280" height="710" />
+    </state>
+    <state x="240" y="43" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.710@0.23.1280.710" timestamp="1602677213715" />
+    <state x="404" y="-775" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603791571514">
+      <screen x="-294" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="404" y="-775" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.710/-294.-1057.1920.1057@-294.-1057.1920.1057" timestamp="1603791571514" />
+    <state x="-281" y="-1044" width="1894" height="1031" maximized="true" key="DiffContextDialog" timestamp="1603741826054">
+      <screen x="-294" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="-281" y="-1044" width="1894" height="1031" maximized="true" key="DiffContextDialog/0.23.1280.710/-294.-1057.1920.1057@-294.-1057.1920.1057" timestamp="1603377769821" />
+    <state x="175" y="-915" key="SettingsEditor" timestamp="1603378241538">
+      <screen x="-294" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="175" y="-915" key="SettingsEditor/0.23.1280.710/-294.-1057.1920.1057@-294.-1057.1920.1057" timestamp="1603378241538" />
+    <state x="71" y="-924" key="SettingsEditor/0.23.1280.777/-398.-1057.1920.989@-398.-1057.1920.989" timestamp="1603205787494" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1603376787617">
+      <screen x="-294" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.23.1280.710/-294.-1057.1920.1057@-294.-1057.1920.1057" timestamp="1603376787617" />
+    <state x="341" y="23" width="598" height="735" key="find.popup" timestamp="1602662061836">
+      <screen x="0" y="23" width="1280" height="710" />
+    </state>
+    <state x="341" y="23" width="598" height="735" key="find.popup/0.23.1280.710@0.23.1280.710" timestamp="1602662061836" />
+    <state x="305" y="57" width="670" height="680" key="search.everywhere.popup" timestamp="1603725134062">
+      <screen x="0" y="23" width="1280" height="713" />
+    </state>
+    <state x="305" y="57" width="670" height="676" key="search.everywhere.popup/0.23.1280.710/-398.-1057.1920.1057@0.23.1280.710" timestamp="1602184696746" />
+    <state x="305" y="57" width="670" height="680" key="search.everywhere.popup/0.23.1280.713/-294.-1057.1920.1057@0.23.1280.713" timestamp="1603725134062" />
+    <state x="60" y="-1010" width="1005" height="942" key="search.everywhere.popup/0.23.1280.777/-398.-1057.1920.989@-398.-1057.1920.989" timestamp="1603205464773" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/index.php</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
