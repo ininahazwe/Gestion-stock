@@ -49,6 +49,7 @@ include('../../includes/navbar.php');
             <table id="ecran_data" class="table table-bordered table-striped">
                 <thead>
                 <tr>
+                    <td>#</td>
                     <th>Ref</th>
                     <th>Type</th>
                     <th>Modèle</th>
@@ -116,18 +117,17 @@ include('../../includes/navbar.php');
                 var dataTable = $('#ordinateur_data').DataTable({
                     "processing":true,
                     "serverSide":true,
+                    "columnDefs": [{
+                        "targets": [0,6,8,9,10,11,12,13], //Comma separated values
+                        "visible": false,
+                        "searchable": false }
+                    ],
                     "order":[],
                     "ajax":{
                         url:"http://localhost:8888/Admin/pages/ordinateur/fetch.php",
                         type:"POST",
                         data:{is_ordinateur:is_ordinateur}
                     },
-                    "columnDefs":[
-                        {
-                            "targets":[2],
-                            "orderable":false,
-                        },
-                    ],
                 });
             }
 
@@ -161,11 +161,10 @@ include('../../includes/navbar.php');
                         type:"POST",
                         data:{is_ecran:is_ecran}
                     },
-                    "columnDefs":[
-                        {
-                            "targets":[2],
-                            "orderable":false,
-                        },
+                    "columnDefs": [{
+                        "targets": [0], //Comma separated values
+                        "visible": false,
+                        "searchable": false }
                     ],
                 });
             }
@@ -200,11 +199,10 @@ include('../../includes/navbar.php');
                         type:"POST",
                         data:{is_clavier:is_clavier}
                     },
-                    "columnDefs":[
-                        {
-                            "targets":[2],
-                            "orderable":false,
-                        },
+                    "columnDefs": [{
+                        "targets": [0], //Comma separated values
+                        "visible": false,
+                        "searchable": false }
                     ],
                 });
             }
@@ -239,11 +237,10 @@ include('../../includes/navbar.php');
                         type:"POST",
                         data:{is_clavier:is_souris}
                     },
-                    "columnDefs":[
-                        {
-                            "targets":[2],
-                            "orderable":false,
-                        },
+                    "columnDefs": [{
+                        "targets": [0], //Comma separated values
+                        "visible": false,
+                        "searchable": false }
                     ],
                 });
             }

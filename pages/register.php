@@ -58,24 +58,14 @@ include('../includes/navbar.php');
         </div>
 
         <div class="card-body">
-            <?php
-            if(isset($_SESSION['success']) && $_SESSION['success'] !='')
-            {
-                echo '<h2 class="bg-primary text-white">' .$_SESSION['success'].'</h2>';
-                unset($_SESSION['success']);
-            }
-            if(isset($_SESSION['status']) && $_SESSION['status'] !='')
-            {
-                echo '<h2 class="bg-danger text-white">' .$_SESSION['status'].'</h2>';
-                unset($_SESSION['status']);
-            }
-            ?>
 
             <div class="table-responsive">
                 <?php
-                $connection = mysqli_connect("localhost", "root", "root", "agpi_db2");
-                $query = "SELECT * FROM users";
-                $query_run = mysqli_query($connection, $query);
+                require('../traitements/database.php');
+                $sql = 'SELECT * FROM users';
+                $statement = $connect->prepare($sql);
+                $statement->execute();
+                $people = $statement->fetchAll(PDO::FETCH_OBJ);
                 ?>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
@@ -88,47 +78,33 @@ include('../includes/navbar.php');
                     </tr>
                     </thead>
                     <tbody>
-                    <?php
-                    if(mysqli_num_rows($query_run) > 0)
-                    {
-                        while($row = mysqli_fetch_assoc($query_run))
-                        {
-                            ?>
-
+                    <?php foreach($people as $person): ?>
                             <tr>
-                                <td> <?php echo $row['username']; ?></td>
-                                <td> <?php echo $row['email']; ?></td>
-                                <td> <?php echo $row['password']; ?></td>
+                                <td> <?= $person->username; ?></td>
+                                <td> <?= $person->email; ?></td>
+                                <td> <?= $person->password; ?></td>
                                 <td>
                                     <form action="register_edit.php" method="post">
-                                        <input type="hidden" name="edit_id" value="<?php echo $row['id']; ?>">
                                         <button type="submit" name="edit_btn" class="btn btn-success btn-icon-split">
                                                     <span class="icon text-white-50">
                                                       <i class="fas fa-pen"></i>
                                                     </span>
-                                            <span class="text">Modifier</span>
+                                            <span class="text"><a class="text-white text-decoration-none" href="register_edit.php?id=<?= $person->id ?>">Edit</a></span>
                                         </button>
                                     </form>
                                 </td>
                                 <td>
-                                    <form action="code.php" method="post">
-                                        <input type="hidden" name="delete_id" value="<?php echo $row['id']; ?>">
-                                        <button type="submit" name="delete_btn" class="btn btn-danger btn-icon-split">
+                                    <form action="../traitements/traitement-user.php" method="post">
+                                        <button type="submit" class="btn btn-danger btn-icon-split">
                                                     <span class="icon text-white-50">
                                                       <i class="fas fa-trash"></i>
                                                     </span>
-                                            <span class="text">Delete</span>
+                                            <span class="text"><a class="text-white text-decoration-none" onclick="return confirm('Are you sure you want to delete this entry?')" href="delete.php?id=<?= $person->id ?>">Supprimer</a></span>
                                         </button>
                                     </form>
                                 </td>
                             </tr>
-                            <?php
-                        }
-                    }
-                    else{
-                        echo "Aucune donnée trouvée !";
-                    }
-                    ?>
+                    <?php endforeach; ?>
 
                     </tbody>
                 </table>

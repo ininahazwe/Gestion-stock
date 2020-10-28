@@ -3,6 +3,23 @@ session_start();
 include('../includes/header.php');
 include('../includes/sidebar.php');
 include('../includes/navbar.php');
+
+require '../traitements/database.php';
+$id = $_GET['id'];
+$sql = 'SELECT * FROM users WHERE id=:id';
+$statement = $connect->prepare($sql);
+$statement->execute([':id' => $id ]);
+$person = $statement->fetch(PDO::FETCH_OBJ);
+if (isset ($_POST['username'])  && isset($_POST['email']) && isset($_POST['password']) ) {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $sql = 'UPDATE users SET username=:username, email=:email, password=:password WHERE id=:id';
+    $statement = $connect->prepare($sql);
+    if ($statement->execute([':username' => $username, ':email' => $email, ':password' => $password, ':id' => $id])) {
+        header('Location: register.php');
+    }
+}
 ?>
 
 <div class="container-fluid">
@@ -14,43 +31,34 @@ include('../includes/navbar.php');
         </div>
 
         <div class="card-body">
-            <?php
-                $connection = mysqli_connect("localhost", "root", "root", "agpi_db2");
-                if(isset($_POST['edit_btn']))
-                {
-                    $id = $_POST['edit_id'];
-
-                    $query = "SELECT * FROM users WHERE id='$id' ";
-                    $query_run = mysqli_query($connection, $query);
-
-                    foreach($query_run as $row)
-                    {
-                        ?>
-                            <form action="../traitements/traitement-user.php" method="POST">
-                                <input type="hidden" name="edit_id" value="<?php echo $row['id'] ?>">
-                                <div class="form-group">
-                                    <label> Username </label>
-                                    <input type="text" name="edit_username" value="<?php echo $row['username'] ?>" class="form-control" placeholder="Enter Username">
-                                </div>
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input type="email" name="edit_email" value="<?php echo $row['email'] ?>" class="form-control" placeholder="Enter Email">
-                                </div>
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <input type="password" name="edit_password" value="<?php echo $row['password'] ?>" class="form-control" placeholder="Enter Password">
-                                </div>
-                                    <a href="register.php" class="btn btn-danger">Cancel</a>
-                                    <button type="submit" name="updatebtn" class="btn btn-primary">Update</button>
-                            </form>
-                        <?php
-                    }
-                }
-            ?>
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="username"> Username </label>
+                        <input type="text" name="username" value="<?= $person->username; ?>" class="form-control" id="username" placeholder="Enter Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" value="<?= $person->email; ?>" class="form-control" id="email" placeholder="Enter Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" value="<?= $person->password; ?>" class="form-control" id="password" placeholder="Enter Password">
+                    </div>
+                    <a href="register.php" class="btn btn-danger">Annuler</a>
+                    <button type="submit" class="btn btn-info">Enregistrer</button>
+                </form>
+            <?php if(!empty($message)): ?>
+                <div class="alert alert-success">
+                    <?= $message; ?>
+                </div>
+            <?php endif; ?>
+            </div>
         </div>
     </div>
 </div>
+
 <?php
-include('includes/scripts.php');
-include('includes/footer.php');
+include('../includes/scripts.php');
+include('../includes/footer.php');
+session_destroy();
 ?>

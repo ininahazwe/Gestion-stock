@@ -107,7 +107,7 @@ $result = mysqli_query($connect, $query);
                     <table id="sample_data" class="table table-bordered table-striped">
                         <thead>
                         <tr>
-                            <th class="cache">#</th>
+                            <th>#</th>
                             <th>Ref</th>
                             <th>Type</th>
                             <th>Marque</th>

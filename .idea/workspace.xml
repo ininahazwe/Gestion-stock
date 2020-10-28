@@ -25,8 +25,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54899ddd-bc48-4787-9c89-f8ac861d9a5e" name="Default Changelist" comment="Crud">
-      <change afterPath="$PROJECT_DIR$/db.sql" afterDir="false" />
+    <list default="true" id="54899ddd-bc48-4787-9c89-f8ac861d9a5e" name="Default Changelist" comment="+ Database">
+      <change afterPath="$PROJECT_DIR$/pages/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Liste/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Liste/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ordinateur/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ordinateur/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traitements/traitement-user.php" beforeDir="false" afterPath="$PROJECT_DIR$/traitements/traitement-user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +53,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pages/ecran" />
@@ -54,18 +62,18 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/traitements" />
-      <recent name="$PROJECT_DIR$/img" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/pages" />
-      <recent name="$PROJECT_DIR$/Assets/user-action" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pages/ecran" />
       <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$/traitements" />
       <recent name="$PROJECT_DIR$/includes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages" />
+      <recent name="$PROJECT_DIR$/traitements" />
+      <recent name="$PROJECT_DIR$/img" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Assets/user-action" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -103,7 +111,8 @@
       <workItem from="1603437273000" duration="13820000" />
       <workItem from="1603473806630" duration="57000" />
       <workItem from="1603713626872" duration="13111000" />
-      <workItem from="1603786719496" duration="9467000" />
+      <workItem from="1603786719496" duration="10114000" />
+      <workItem from="1603872883722" duration="11494000" />
     </task>
     <task id="LOCAL-00001" summary="Crud">
       <created>1603815394620</created>
@@ -112,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603815394621</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="+ Database">
+      <created>1603815843705</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603815843705</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,20 +156,23 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Crud" />
-    <option name="LAST_COMMIT_MESSAGE" value="Crud" />
+    <MESSAGE value="+ Database" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Database" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="214" key="#SQL_Dialects" timestamp="1602237616786">
       <screen x="0" y="23" width="1280" height="710" />
     </state>
     <state x="0" y="214" key="#SQL_Dialects/0.23.1280.710@0.23.1280.710" timestamp="1602237616786" />
-    <state x="240" y="43" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602677213715">
-      <screen x="0" y="23" width="1280" height="710" />
+    <state x="66" y="-1027" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603874027169">
+      <screen x="-294" y="-1057" width="1920" height="1057" />
     </state>
     <state x="240" y="43" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.710@0.23.1280.710" timestamp="1602677213715" />
+    <state x="66" y="-1027" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.713/-294.-1057.1920.1057@-294.-1057.1920.1057" timestamp="1603874027169" />
     <state x="404" y="-775" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603791571514">
       <screen x="-294" y="-1057" width="1920" height="1057" />
     </state>
