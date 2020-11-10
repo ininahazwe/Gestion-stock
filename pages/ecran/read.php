@@ -32,31 +32,38 @@ $result = mysqli_query($connect, $query);
 
                                     <div class="form-group">
                                         <label> Référence </label>
-                                        <input type="text" name="ref" class="form-control" placeholder="nom de la salle...">
+                                        <input type="text" name="ref" class="form-control" placeholder="référence...">
                                     </div>
                                     <div class="form-group">
                                         <label> Type </label>
-                                        <input type="text" name="type" class="form-control" placeholder="nom de la salle...">
+                                        <input type="text" name="type" class="form-control" placeholder="type...">
                                     </div>
                                     <div class="form-group">
                                         <label> Modèle </label>
-                                        <input type="text" name="modele" class="form-control" placeholder="nom de la salle...">
+                                        <input type="text" name="modele" class="form-control" placeholder="modèle...">
                                     </div>
                                     <div class="form-group">
-                                        <label> HDMI </label>
-                                        <input type="text" name="hdmi" class="form-control" placeholder="nom de la salle...">
+                                        <label> HDMI : </label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="hdmi" id="inlineRadio1" value="oui">
+                                            <label class="form-check-label" for="inlineRadio1">Oui</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="hdmi" id="inlineRadio1" value="non">
+                                            <label class="form-check-label" for="inlineRadio1">Non</label>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label> VGA </label>
-                                        <input type="text" name="vga" class="form-control" placeholder="nom de la salle...">
+                                        <input type="text" name="vga" class="form-control" placeholder="vga...">
                                     </div>
                                     <div class="form-group">
                                         <label> DVI </label>
-                                        <input type="text" name="dvi" class="form-control" placeholder="nom de la salle...">
+                                        <input type="text" name="dvi" class="form-control" placeholder="dvi...">
                                     </div>
                                     <div class="form-group">
                                         <label> Port </label>
-                                        <input type="text" name="display_port" class="form-control" placeholder="nom de la salle...">
+                                        <input type="text" name="display_port" class="form-control" placeholder="port...">
                                     </div>
                                     <div class="form-group">
                                         <label>Salle</label>
@@ -69,6 +76,17 @@ $result = mysqli_query($connect, $query);
                                             }
                                             ?>
                                         </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label> Disponibilité : </label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="dispo" value="oui">
+                                            <label class="form-check-label" for="inlineRadio1">Oui</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="dispo" value="non">
+                                            <label class="form-check-label" for="inlineRadio1">Non</label>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -103,8 +121,9 @@ $result = mysqli_query($connect, $query);
                             <th>HDMI</th>
                             <th>VGA</th>
                             <th>DVI</th>
-                            <th>Port</th>
+                            <th>DP</th>
                             <th>Salle</th>
+                            <th>Disponibilité</th>
                         </tr>
                         </thead>
                         <tbody></tbody>
@@ -120,6 +139,7 @@ $result = mysqli_query($connect, $query);
             var dataTable = $('#sample_data').DataTable({
                 "processing" : true,
                 "serverSide" : true,
+                "language": { "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"},
                 "order" : [],
                 "ajax" : {
                     url:"http://localhost:8888/Admin/pages/ecran/fetch.php",
@@ -158,7 +178,7 @@ $result = mysqli_query($connect, $query);
                     },
                     columns:{
                         identifier : [0, 'id'],
-                        editable:[[1, 'ref'], [2, 'type'], [3, 'modele'], [4, 'hdmi'], [5, 'vga'], [6, 'dvi'], [7, 'display_port'], [8, 'salle_Id']]
+                        editable:[[1, 'ref'], [2, 'type'], [3, 'modele'], [4, 'hdmi'], [5, 'vga'], [6, 'dvi'], [7, 'display_port'], [8, 'salle_Id'],[9, 'dispo']]
                     },
                     restoreButton:false,
                     onSuccess:function(data, textStatus, jqXHR)

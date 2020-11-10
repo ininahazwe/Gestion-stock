@@ -4,7 +4,7 @@
 
 include('../../traitements/database.php');
 
-$column = array("id", "ref", "type", "marque", "salle_Id");
+$column = array("id", "ref", "type", "marque", "salle_Id", "dispo");
 
 
 $query = "SELECT * FROM souris";
@@ -16,6 +16,7 @@ if(isset($_POST["search"]["value"]))
  OR type LIKE "%'.$_POST["search"]["value"].'%" 
  OR marque LIKE "%'.$_POST["search"]["value"].'%" 
  OR salle_Id LIKE "%'.$_POST["search"]["value"].'%" 
+ OR dispo LIKE "%'.$_POST["search"]["value"].'%" 
  ';
 }
 
@@ -50,6 +51,7 @@ foreach($result as $row)
     $sub_array[] = $row['type'];
     $sub_array[] = $row['marque'];
     $sub_array[] = $row['salle_Id'];
+    $sub_array[] = $row['dispo'];
     $data[] = $sub_array;
 }
 

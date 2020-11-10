@@ -1,47 +1,34 @@
 <?php
-session_start();
+
 include('../includes/header.php');
-include('../includes/sidebar.php');
-include('../includes/navbar.php');
 ?>
 <!-- Begin Page Content -->
 
-<div class="modal fade" id="addadminprofile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Créer un utilisateur</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+<div class="container">
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="container-fluid">
+                <div class="text-center">
+                    <img class="mb-2" style="width: 100px;" src="../img/logo.png">
+                    <H3>S'enregistrer</H3>
+                </div>
             </div>
-            <form action="../traitements/traitement-user.php" method="POST">
 
-                <div class="modal-body">
-
-                    <div class="form-group">
-                        <input type="hidden" name="action" value="create">
-                        <label> Username </label>
-                        <input type="text" name="username" class="form-control" placeholder="nom d'utilisateur">
-                    </div>
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" name="email" class="form-control" placeholder="adresse email">
-                    </div>
-                    <div class="form-group">
-                        <label>Password</label>
-                        <input type="password" name="password" class="form-control" placeholder="Mot de passe">
-                    </div>
-                    <div class="form-group">
-                        <label>Confirm Password</label>
-                        <input type="password" name="confirmpassword" class="form-control" placeholder="Confirmer le mot de passe">
-                    </div>
-
+        <form action="../traitements/traitement-user.php" method="POST">
+            <input type="hidden" name="action" value="create">
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <label> Username </label>
+                    <input type="text" name="username" class="form-control form-control-user" placeholder="nom d'utilisateur">
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" name="registerbtn" class="btn btn-primary">Save</button>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control form-control-user" placeholder="Mot de passe">
                 </div>
+<<<<<<< Updated upstream
             </form>
 
         </div>
@@ -132,10 +119,26 @@ include('../includes/navbar.php');
 
                     </tbody>
                 </table>
+=======
+>>>>>>> Stashed changes
             </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <label>Confirm Password</label>
+                    <input type="password" name="confirmpassword" class="form-control form-control-user" placeholder="Confirmer le mot de passe">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" name="registerbtn" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+            <?php
+            if(isset($erreur)) {
+                echo '<span style="color: red; ">' .$erreur. "</span>";
+            }
+            ?>
         </div>
     </div>
-
 </div>
 
 

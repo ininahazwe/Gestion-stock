@@ -25,8 +25,54 @@
     </select>
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="54899ddd-bc48-4787-9c89-f8ac861d9a5e" name="Default Changelist" comment="Crud">
       <change afterPath="$PROJECT_DIR$/db.sql" afterDir="false" />
+=======
+    <list default="true" id="54899ddd-bc48-4787-9c89-f8ac861d9a5e" name="Default Changelist" comment="+ Database">
+      <change afterPath="$PROJECT_DIR$/includes/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/utilisateurs/confirm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/utilisateurs/delete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/utilisateurs/fetch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/utilisateurs/fetch_single.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/utilisateurs/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/utilisateurs/insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b344b3c7-0124-4226-a2e9-f3ac78e4f9ef.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b344b3c7-0124-4226-a2e9-f3ac78e4f9ef.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Liste/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Liste/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/clavier/action.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/clavier/action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/clavier/fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/clavier/fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/clavier/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/clavier/insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/clavier/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/clavier/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ecran/action.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ecran/action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ecran/fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ecran/fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ecran/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ecran/insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ecran/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ecran/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ordinateur/action.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ordinateur/action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ordinateur/fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ordinateur/fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ordinateur/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ordinateur/insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ordinateur/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ordinateur/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/salles/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/salles/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/salles/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/salles/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/souris/action.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/souris/action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/souris/fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/souris/fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/souris/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/souris/insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/souris/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/souris/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/utilisateurs/create.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/utilisateurs/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/utilisateurs/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/utilisateurs/update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/utilisateurs/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/utilisateurs/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traitements/code.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traitements/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/traitements/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traitements/traitement-user.php" beforeDir="false" afterPath="$PROJECT_DIR$/traitements/traitement-user.php" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +149,22 @@
       <workItem from="1603437273000" duration="13820000" />
       <workItem from="1603473806630" duration="57000" />
       <workItem from="1603713626872" duration="13111000" />
+<<<<<<< Updated upstream
       <workItem from="1603786719496" duration="9467000" />
+=======
+      <workItem from="1603786719496" duration="10114000" />
+      <workItem from="1603872883722" duration="14179000" />
+      <workItem from="1603964349654" duration="668000" />
+      <workItem from="1604045777412" duration="19733000" />
+      <workItem from="1604091949576" duration="23000" />
+      <workItem from="1604306185668" duration="14654000" />
+      <workItem from="1604390974632" duration="9768000" />
+      <workItem from="1604477293675" duration="16751000" />
+      <workItem from="1604565962246" duration="11120000" />
+      <workItem from="1604651340053" duration="7707000" />
+      <workItem from="1604760943493" duration="168000" />
+      <workItem from="1604996300649" duration="12817000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Crud">
       <created>1603815394620</created>
@@ -154,43 +215,50 @@
       <screen x="0" y="23" width="1280" height="710" />
     </state>
     <state x="240" y="43" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.710@0.23.1280.710" timestamp="1602677213715" />
+<<<<<<< Updated upstream
+=======
+    <state x="66" y="-1027" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.713/-294.-1057.1920.1057@-294.-1057.1920.1057" timestamp="1603874027169" />
+    <state x="337" y="187" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604310587500">
+      <screen x="0" y="23" width="1280" height="710" />
+    </state>
+    <state x="337" y="187" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.710/-294.-1057.1920.1057@0.23.1280.710" timestamp="1604310587500" />
+>>>>>>> Stashed changes
     <state x="404" y="-775" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603791571514">
       <screen x="-294" y="-1057" width="1920" height="1057" />
     </state>
     <state x="404" y="-775" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.710/-294.-1057.1920.1057@-294.-1057.1920.1057" timestamp="1603791571514" />
-    <state x="-281" y="-1044" width="1894" height="1031" maximized="true" key="DiffContextDialog" timestamp="1603741826054">
+    <state x="-281" y="-1044" width="1894" height="1031" maximized="true" key="DiffContextDialog" timestamp="1604504949321">
       <screen x="-294" y="-1057" width="1920" height="1057" />
     </state>
-    <state x="-281" y="-1044" width="1894" height="1031" maximized="true" key="DiffContextDialog/0.23.1280.710/-294.-1057.1920.1057@-294.-1057.1920.1057" timestamp="1603377769821" />
+    <state x="-281" y="-1044" width="1894" height="1031" maximized="true" key="DiffContextDialog/0.23.1280.710/-294.-1057.1920.1057@-294.-1057.1920.1057" timestamp="1604504949321" />
+    <state x="424" y="-796" key="NewPhpClassDialog" timestamp="1605003866433">
+      <screen x="-294" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="424" y="-796" key="NewPhpClassDialog/0.23.1280.710/-294.-1057.1920.1057@-294.-1057.1920.1057" timestamp="1605003866433" />
+    <state x="459" y="310" key="NewPhpFileDialog" timestamp="1604052912483">
+      <screen x="0" y="23" width="1280" height="715" />
+    </state>
+    <state x="459" y="310" key="NewPhpFileDialog/0.23.1280.715/-294.-1057.1920.1057@0.23.1280.715" timestamp="1604052912483" />
     <state x="175" y="-915" key="SettingsEditor" timestamp="1603378241538">
       <screen x="-294" y="-1057" width="1920" height="1057" />
     </state>
     <state x="175" y="-915" key="SettingsEditor/0.23.1280.710/-294.-1057.1920.1057@-294.-1057.1920.1057" timestamp="1603378241538" />
     <state x="71" y="-924" key="SettingsEditor/0.23.1280.777/-398.-1057.1920.989@-398.-1057.1920.989" timestamp="1603205787494" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1603376787617">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1604656357027">
       <screen x="-294" y="-1057" width="1920" height="1057" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.23.1280.710/-294.-1057.1920.1057@-294.-1057.1920.1057" timestamp="1603376787617" />
+    <state width="500" height="445" key="SwitcherDM/0.23.1280.710/-294.-1057.1920.1057@-294.-1057.1920.1057" timestamp="1604501070749" />
+    <state width="500" height="445" key="SwitcherDM/0.23.1280.713/-294.-1057.1920.1057@-294.-1057.1920.1057" timestamp="1604656357027" />
     <state x="341" y="23" width="598" height="735" key="find.popup" timestamp="1602662061836">
       <screen x="0" y="23" width="1280" height="710" />
     </state>
     <state x="341" y="23" width="598" height="735" key="find.popup/0.23.1280.710@0.23.1280.710" timestamp="1602662061836" />
-    <state x="305" y="57" width="670" height="680" key="search.everywhere.popup" timestamp="1603725134062">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state x="164" y="-1007" width="1005" height="1009" key="search.everywhere.popup" timestamp="1604417280111">
+      <screen x="-294" y="-1057" width="1920" height="1057" />
     </state>
     <state x="305" y="57" width="670" height="676" key="search.everywhere.popup/0.23.1280.710/-398.-1057.1920.1057@0.23.1280.710" timestamp="1602184696746" />
+    <state x="164" y="-1007" width="1005" height="1009" key="search.everywhere.popup/0.23.1280.713/-294.-1057.1920.1057@-294.-1057.1920.1057" timestamp="1604417280111" />
     <state x="305" y="57" width="670" height="680" key="search.everywhere.popup/0.23.1280.713/-294.-1057.1920.1057@0.23.1280.713" timestamp="1603725134062" />
     <state x="60" y="-1010" width="1005" height="942" key="search.everywhere.popup/0.23.1280.777/-398.-1057.1920.989@-398.-1057.1920.989" timestamp="1603205464773" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/index.php</url>
-          <line>25</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

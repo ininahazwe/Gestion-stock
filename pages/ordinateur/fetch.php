@@ -4,7 +4,7 @@
 
 include('../../traitements/database.php');
 
-$column = array("id", "ref", "type", "marque", "modele", "systeme", "processeur", "ram", "session", "mdp", "ip_fixe", "office_365", "logiciel", "etat", "salle_Id");
+$column = array("id", "ref", "type", "marque", "modele", "systeme", "processeur", "ram", "session", "mdp", "ip_fixe", "office_365", "logiciel", "etat", "salle_Id", "dispo");
 
 
 $query = "SELECT * FROM ordinateur";
@@ -26,6 +26,7 @@ if(isset($_POST["search"]["value"]))
  OR logiciel LIKE "%'.$_POST["search"]["value"].'%" 
  OR etat LIKE "%'.$_POST["search"]["value"].'%" 
  OR salle_Id LIKE "%'.$_POST["search"]["value"].'%" 
+ OR dispo LIKE "%'.$_POST["search"]["value"].'%" 
  ';
 }
 
@@ -70,6 +71,7 @@ foreach($result as $row)
     $sub_array[] = $row['logiciel'];
     $sub_array[] = $row['etat'];
     $sub_array[] = $row['salle_Id'];
+    $sub_array[] = $row['dispo'];
     $data[] = $sub_array;
 }
 

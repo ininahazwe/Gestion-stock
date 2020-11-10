@@ -5,110 +5,169 @@ include('../../includes/sidebar.php');
 include('../../includes/navbar.php');
 ?>
 
-<!-- requete pour chercher les salles en bdd -->
-<?php include('../../traitements/database.php');
-$req = $bdd->prepare("SELECT id, nom, localisation FROM t_salle");
-$req->execute();
-$salles = $req->fetchAll();
-?>
-
-<!-- Begin Page Content -->
 <div class="container-fluid">
-
-    <!---Modal création de salle --->
-
-    <div class="modal fade" id="ajoutsalle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ajouter une salle</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form action="../../traitements/traitement-salles.php" enctype="multipart/form-data" method="POST">
-
-                    <div class="modal-body">
-                        <input type="hidden" name="user_id" value="1">
-                        <input type="hidden" name="action" value="create">
-
-                        <div class="form-group">
-                            <label> Nom </label>
-                            <input type="text" name="nom" class="form-control" placeholder="nom de la salle...">
-                        </div>
-                        <div class="form-group">
-                            <label> Localisation </label>
-                            <input type="text" name="localisation" class="form-control" placeholder="Emplacement de la salle...">
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" name="registerbtn" class="btn btn-primary">Save</button>
-                    </div>
-                </form>
-
-            </div>
+    <div class="table-responsive">
+        <br />
+        <div align="right">
+            <button type="button" id="add_button" data-toggle="modal" data-target="#userModal" class="btn btn-info btn-lg">Ajouter</button>
         </div>
-    </div>
-    <!---FIn Modal --->
-
-    <!-- Page Heading -->
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Salles
-            <small>
-
-            </small>
-        </h1>
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm float-right" data-toggle="modal" data-target="#ajoutsalle"><i class="fas fa-plus fa-sm text-white-50"></i> Ajouter une salle</a>
-    </div>
-
-    <!-- Content Row -->
-    <div class="row">
-
-        <?php foreach($salles as $salle){ ?>
-            <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-primary shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><?= $salle['localisation']; ?></div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $salle['nom']; ?></div>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-school fa-2x text-gray-300"></i>
-                            </div>
-                        </div>
-                        <div class="row mt-1 float-right">
-                            <a href="#" class="btn btn-info m-1 btn-circle btn-sm">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                            <a href="update.php?id=<?= $salle['id']; ?>" class="btn btn-warning m-1 btn-circle btn-sm">
-                                <i class="fas fa-pen"></i>
-                            </a>
-                            <a href="#" class="btn btn-danger m-1 btn-circle btn-sm">
-                                <i class="fas fa-trash"></i>
-                            </a>
-                            <form action="../../traitements/traitement-salles.php" method="POST">
-                                <input type="hidden" name="action" value="delete">
-                                <input type="hidden" name="id" value="<?= $salle['id']?>">
-                                <input type="submit" value="Supprimer" class="btn btn-danger m-1 btn-circle btn-sm">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        <?php } ?>
+        <br /><br />
+        <table id="user_data" class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th width="10%">Image</th>
+                <th width="35%">Pseudo</th>
+                <th width="35%">Mot de passe</th>
+                <th width="10%">Modifier</th>
+                <th width="10%">Supprimer</th>
+            </tr>
+            </thead>
+        </table>
 
     </div>
 </div>
-<!-- /.container-fluid -->
+
+<div id="userModal" class="modal fade">
+    <div class="modal-dialog">
+        <form method="post" id="user_form" enctype="multipart/form-data">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-left">Créer un utilisateur</h5>
+                    <button type="button" class="close float-right" data-dismiss="modal">X</button>
+                </div>
+                <div class="modal-body">
+                    <label>Nom d'utilisateur</label>
+                    <input type="text" name="username" id="username" class="form-control" />
+                    <br />
+                    <label>Mot de passe</label>
+                    <input type="password" name="password" id="password" class="form-control" />
+                    <br />
+                    <label>Photo</label>
+                    <input type="file" name="user_image" id="user_image" />
+                    <span id="user_uploaded_image"></span>
+                </div>
+                <div class="modal-footer">
+                    <input type="hidden" name="user_id" id="user_id" />
+                    <input type="hidden" name="operation" id="operation" />
+                    <input type="submit" name="action" id="action" class="btn btn-success" value="Enregister" />
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript" language="javascript" >
+    $(document).ready(function(){
+        $('#add_button').click(function(){
+            $('#user_form')[0].reset();
+            $('.modal-title').text("Ajouter un utilisateur");
+            $('#action').val("Enregistrer");
+            $('#operation').val("Enregistrer");
+            $('#user_uploaded_image').html('');
+        });
+
+        var dataTable = $('#user_data').DataTable({
+            "processing":true,
+            "serverSide":true,
+            "order":[],
+            "ajax":{
+                url:"fetch.php",
+                type:"POST"
+            },
+            "columnDefs":[
+                {
+                    "targets":[0, 3, 4],
+                    "orderable":false,
+                },
+            ],
+
+        });
+
+        $(document).on('submit', '#user_form', function(event){
+            event.preventDefault();
+            var userName = $('#username').val();
+            var passWord = $('#password').val();
+            var extension = $('#user_image').val().split('.').pop().toLowerCase();
+            if(extension != '')
+            {
+                if(jQuery.inArray(extension, ['gif','png','jpg','jpeg']) == -1)
+                {
+                    alert("Invalid Image File");
+                    $('#user_image').val('');
+                    return false;
+                }
+            }
+            if(userName != '' && passWord != '')
+            {
+                $.ajax({
+                    url:"insert.php",
+                    method:'POST',
+                    data:new FormData(this),
+                    contentType:false,
+                    processData:false,
+                    success:function(data)
+                    {
+                        alert(data);
+                        $('#user_form')[0].reset();
+                        $('#userModal').modal('hide');
+                        dataTable.ajax.reload();
+                    }
+                });
+            }
+            else
+            {
+                alert("Both Fields are Required");
+            }
+        });
+
+        $(document).on('click', '.update', function(){
+            var user_id = $(this).attr("id");
+            $.ajax({
+                url:"fetch_single.php",
+                method:"POST",
+                data:{user_id:user_id},
+                dataType:"json",
+                success:function(data)
+                {
+                    $('#userModal').modal('show');
+                    $('#username').val(data.username);
+                    $('#password').val(data.password);
+                    $('.modal-title').text("Mettre à jour");
+                    $('#user_id').val(user_id);
+                    $('#user_uploaded_image').html(data.user_image);
+                    $('#action').val("Valider");
+                    $('#operation').val("Valider");
+                }
+            })
+        });
+
+        $(document).on('click', '.delete', function(){
+            var user_id = $(this).attr("id");
+            if(confirm("Are you sure you want to delete this?"))
+            {
+                $.ajax({
+                    url:"delete.php",
+                    method:"POST",
+                    data:{user_id:user_id},
+                    success:function(data)
+                    {
+                        alert(data);
+                        dataTable.ajax.reload();
+                    }
+                });
+            }
+            else
+            {
+                return false;
+            }
+        });
+    });
+</script>
 
 <?php
 include('../../includes/scripts.php');
 include('../../includes/footer.php');
-session_destroy();
 ?>
 
 

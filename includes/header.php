@@ -1,3 +1,8 @@
+<?php
+if(session_status() == PHP_SESSION_NONE){
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -37,3 +42,13 @@
 
 <!-- Page Wrapper -->
 <div id="wrapper">
+        <?php if(isset($_SESSION['flash'])): ?>
+            <?php foreach ($_SESSION['flash'] as $type => $message): ?>
+            <div class="container mx-auto">
+                <div class="alert alert-<?= $type; ?>">
+                    <?= $message; ?>
+                </div>
+            </div>
+            <?php endforeach; ?>
+            <?php unset($_SESSION['flash']); ?>
+        <?php endif; ?>

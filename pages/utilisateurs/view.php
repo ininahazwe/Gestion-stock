@@ -4,34 +4,30 @@ include('../../includes/header.php');
 include('../../includes/sidebar.php');
 include('../../includes/navbar.php');
 
+include_once '../../traitements/database.php';
 
-session_start();
-include('bd/connexionDB.php');
-// S'il n'y a pas de session alors on ne va pas sur cette page
-if (!isset($_SESSION['id'])) {
-    header('Location: index.php');
-    exit;
+if(isset($_GET['id']) AND $_GET['id'] > 0) {
+    $getid = intval($_GET['id']);
+    $requser = $connect->prepare('SELECT * FROM utilisateurs WHERE id = ?');
+    $requser->execute(array($getid));
+    $userinfo = $requser->fetch();
+    ?>
+
+    <div align="center">
+        <h2>Profil de <?php echo $userinfo['username']; ?></h2>
+        <br /><br />
+        Pseudo = <?php echo $userinfo['username']; ?>
+        <br />
+        Password = <?php echo $userinfo['password']; ?>
+        <br />
+    </div>
+
+    <?php
 }
-// On récupère les informations de l'utilisateur connecté
-$afficher_profil = $connect->query("SELECT * 
-    FROM users 
-    WHERE id = ?",
-    array($_SESSION['id']));
-
-$afficher_profil = $afficher_profil->fetch();
-
 ?>
-<h2>Voici le profil de <?= $afficher_profil['username']; ?></h2>
-<div>Quelques informations sur vous : </div>
-<ul>
-    <li>Votre id est : <?= $afficher_profil['id'] ?></li>
-    <li>Votre mail est : <?= $afficher_profil['mail'] ?></li>
-    <li>Votre username : <?= $afficher_profil['username'] ?></li>
-</ul>
 
 <?php
 include('../../includes/scripts.php');
 include('../../includes/footer.php');
-session_destroy();
 ?>
 

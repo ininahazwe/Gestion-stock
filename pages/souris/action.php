@@ -11,6 +11,7 @@ if($_POST['action'] == 'edit')
         ':type'  => $_POST['type'],
         ':marque'   => $_POST['marque'],
         ':salle_Id'   => $_POST['salle_Id'],
+        ':dispo'   => $_POST['dispo'],
         ':id'    => $_POST['id']
     );
 
@@ -19,7 +20,8 @@ if($_POST['action'] == 'edit')
  SET ref = :ref, 
  type = :type, 
  marque = :marque, 
- salle_Id = :salle_Id
+ salle_Id = :salle_Id,
+ dispo = :dispo
  WHERE id = :id
  ";
     $statement = $connect->prepare($query);

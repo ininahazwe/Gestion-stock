@@ -54,6 +54,17 @@ $result = mysqli_query($connect, $query);
                                             ?>
                                         </select>
                                     </div>
+                                    <div class="form-group">
+                                        <label> Disponibilité : </label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="dispo" value="oui">
+                                            <label class="form-check-label" for="inlineRadio1">Oui</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="dispo" value="non">
+                                            <label class="form-check-label" for="inlineRadio1">Non</label>
+                                        </div>
+                                    </div>
 
                                 </div>
                                 <div class="modal-footer">
@@ -85,6 +96,7 @@ $result = mysqli_query($connect, $query);
                             <th>Type</th>
                             <th>Marque</th>
                             <th>Salle</th>
+                            <th>Disponibilité</th>
                         </tr>
                         </thead>
                         <tbody></tbody>
@@ -101,6 +113,7 @@ $result = mysqli_query($connect, $query);
             var dataTable = $('#sample_data').DataTable({
                 "processing" : true,
                 "serverSide" : true,
+                "language": { "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"},
                 "order" : [],
                 "ajax" : {
                     url:"http://localhost:8888/Admin/pages/souris/fetch.php",
@@ -139,7 +152,7 @@ $result = mysqli_query($connect, $query);
                     },
                     columns:{
                         identifier : [0, 'id'],
-                        editable:[[1, 'ref'], [2, 'type'], [3, 'marque'], [4, 'salle_Id']]
+                        editable:[[1, 'ref'], [2, 'type'], [3, 'marque'], [4, 'salle_Id'], [5, 'dispo']]
                     },
                     restoreButton:false,
                     onSuccess:function(data, textStatus, jqXHR)

@@ -4,7 +4,7 @@
 
 include('../../traitements/database.php');
 
-$column = array("id", "ref", "type", "modele", "hdmi", "vga", "dvi", "display_port", "salle_Id");
+$column = array("id", "ref", "type", "modele", "hdmi", "vga", "dvi", "display_port", "salle_Id", "dispo");
 
 
 $query = "SELECT * FROM ecran ";
@@ -20,6 +20,7 @@ if(isset($_POST["search"]["value"]))
  OR dvi LIKE "%'.$_POST["search"]["value"].'%" 
  OR display_port LIKE "%'.$_POST["search"]["value"].'%" 
  OR salle_Id LIKE "%'.$_POST["search"]["value"].'%" 
+ OR dispo LIKE "%'.$_POST["search"]["value"].'%" 
  ';
 }
 
@@ -58,6 +59,7 @@ foreach($result as $row)
     $sub_array[] = $row['dvi'];
     $sub_array[] = $row['display_port'];
     $sub_array[] = $row['salle_Id'];
+    $sub_array[] = $row['dispo'];
     $data[] = $sub_array;
 }
 

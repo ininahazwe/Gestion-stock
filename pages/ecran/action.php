@@ -15,6 +15,7 @@ if($_POST['action'] == 'edit')
         ':dvi'   => $_POST['dvi'],
         ':display_port'   => $_POST['display_port'],
         ':salle_Id'   => $_POST['salle_Id'],
+        ':dispo'   => $_POST['dispo'],
         ':id'    => $_POST['id']
     );
 
@@ -27,7 +28,8 @@ if($_POST['action'] == 'edit')
  vga = :vga, 
  dvi = :dvi, 
  display_port = :display_port, 
- salle_Id = :salle_Id
+ salle_Id = :salle_Id,
+ dispo = :dispo
  WHERE id = :id
  ";
     $statement = $connect->prepare($query);

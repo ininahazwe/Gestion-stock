@@ -21,6 +21,7 @@ if($_POST['action'] == 'edit')
         ':logiciel'   => $_POST['logiciel'],
         ':etat'   => $_POST['etat'],
         ':salle_Id'   => $_POST['salle_Id'],
+        ':dispo'   => $_POST['dispo'],
         ':id'    => $_POST['id']
     );
 
@@ -39,7 +40,8 @@ if($_POST['action'] == 'edit')
  office_365 = :office_365,
  logiciel = :logiciel,
  etat = :etat,
- salle_Id = :salle_Id
+ salle_Id = :salle_Id,
+ dispo = :dispo
  WHERE id = :id
  ";
     $statement = $connect->prepare($query);

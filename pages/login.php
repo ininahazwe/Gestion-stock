@@ -1,5 +1,4 @@
 <?php
-session_start();
 include('../includes/header.php');
 ?>
     <div class="container">
@@ -21,17 +20,27 @@ include('../includes/header.php');
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Identifiez-vous</h1>
                                     </div>
-                                    <form class="user" action="../traitements/traitement-user.php" method="POST">
+                                    <form action="../traitements/traitement-user.php" method="POST">
                                         <input type="hidden" name="action" value="connect">
                                         <div class="form-group">
+                                            <label for="">Nom d'utilisateur</label>
                                             <input type="text" name="username" id="username" class="form-control form-control-user" placeholder="nom d'utilisateur / email...">
                                         </div>
                                         <div class="form-group">
+                                            <label for="">Mot de passe</label>
                                             <input type="password" name="password" id="password" class="form-control form-control-user" placeholder="mot de passe...">
                                         </div>
-                                        <input type="submit" name="login_btn" class="btn btn-primary btn-user btn-block" value="Valider">
-                                        <span class="loginMsg"><?php echo @$msg;?></span>
+                                        <input type="submit" name="formconnexion"" class="btn btn-primary btn-user btn-block" value="Se connecter">
                                     </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="register.php">Créér un compte</a>
+                                    </div>
+                                    <?php
+                                    if(isset($erreur)) {
+                                        echo '<span style="color: red; ">' .$erreur. "</span>";
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -42,6 +51,6 @@ include('../includes/header.php');
     </div>
 
 <?php
-include('includes/footer.php');
-include('includes/scripts.php');
+include('../includes/footer.php');
+include('../includes/scripts.php');
 ?>

@@ -34,7 +34,15 @@ $result = mysqli_query($connect, $query);
                                         <input type="text" name="ref" class="form-control" placeholder="Référence">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="type" class="form-control" placeholder="Type">
+                                        <label> Type : </label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="type" id="inlineRadio1" value="fixe">
+                                            <label class="form-check-label" for="inlineRadio1">Fixe</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="type" id="inlineRadio1" value="portable">
+                                            <label class="form-check-label" for="inlineRadio1">Portable</label>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <input type="text" name="marque" class="form-control" placeholder="Marque">
@@ -43,7 +51,15 @@ $result = mysqli_query($connect, $query);
                                         <input type="text" name="modele" class="form-control" placeholder="Modèle">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="systeme" class="form-control" placeholder="Système">
+                                        <label> Type : </label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="systeme" id="inlineRadio1" value="windows 10 pro">
+                                            <label class="form-check-label" for="inlineRadio1">Windows 10 pro</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="systeme" id="inlineRadio1" value="windows 10 famille">
+                                            <label class="form-check-label" for="inlineRadio1">Windows 10 Famille</label>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <input type="text" name="processeur" class="form-control" placeholder="Processeur">
@@ -67,7 +83,19 @@ $result = mysqli_query($connect, $query);
                                         <input type="text" name="logiciel" class="form-control" placeholder="Logiciel">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="etat" class="form-control" placeholder="Etat">
+                                        <label> État : </label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="etat" id="inlineRadio1" value="Mauvais">
+                                            <label class="form-check-label" for="inlineRadio1">Mauvais</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="etat" id="inlineRadio1" value="Bon">
+                                            <label class="form-check-label" for="inlineRadio1">Bon</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="etat" id="inlineRadio1" value="Très bon">
+                                            <label class="form-check-label" for="inlineRadio1">Très bon</label>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label>Salle</label>
@@ -80,6 +108,17 @@ $result = mysqli_query($connect, $query);
                                             }
                                             ?>
                                         </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label> Disponibilité : </label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="dispo" value="oui">
+                                            <label class="form-check-label" for="inlineRadio1">Oui</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="dispo" value="non">
+                                            <label class="form-check-label" for="inlineRadio1">Non</label>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -122,6 +161,7 @@ $result = mysqli_query($connect, $query);
                             <th>Logiciel</th>
                             <th>État</th>
                             <th>Salle</th>
+                            <th>Disponibilité</th>
                         </tr>
                         </thead>
                         <tbody></tbody>
@@ -176,7 +216,7 @@ $result = mysqli_query($connect, $query);
                     },
                     columns:{
                         identifier : [0, 'id'],
-                        editable:[[1, 'ref'], [2, 'type'], [3, 'marque'], [4, 'modele'], [5, 'systeme'], [6, 'processeur'], [7, 'ram'], [8, 'session'], [9, 'mdp'], [10, 'ip_fixe'], [11, 'office_365'], [12, 'logiciel'], [13, 'etat'], [14, 'salle_Id']]
+                        editable:[[1, 'ref'], [2, 'type'], [3, 'marque'], [4, 'modele'], [5, 'systeme'], [6, 'processeur'], [7, 'ram'], [8, 'session'], [9, 'mdp'], [10, 'ip_fixe'], [11, 'office_365'], [12, 'logiciel'], [13, 'etat'], [14, 'salle_Id'], [15, 'dispo']]
                     },
                     restoreButton:false,
                     onSuccess:function(data, textStatus, jqXHR)

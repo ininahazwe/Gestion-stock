@@ -116,6 +116,15 @@ include('../../includes/navbar.php');
                 var dataTable = $('#ordinateur_data').DataTable({
                     "processing":true,
                     "serverSide":true,
+<<<<<<< Updated upstream
+=======
+                    "language": { "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"},
+                    "columnDefs": [{
+                        "targets": [0,6,8,9,10,11,12,13], //Comma separated values
+                        "visible": false,
+                        "searchable": false }
+                    ],
+>>>>>>> Stashed changes
                     "order":[],
                     "ajax":{
                         url:"http://localhost:8888/Admin/pages/ordinateur/fetch.php",
@@ -155,6 +164,7 @@ include('../../includes/navbar.php');
                 var dataTable = $('#ecran_data').DataTable({
                     "processing":true,
                     "serverSide":true,
+                    "language": { "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"},
                     "order":[],
                     "ajax":{
                         url:"http://localhost:8888/Admin/pages/ecran/fetch.php",
@@ -194,6 +204,7 @@ include('../../includes/navbar.php');
                 var dataTable = $('#clavier_data').DataTable({
                     "processing":true,
                     "serverSide":true,
+                    "language": { "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"},
                     "order":[],
                     "ajax":{
                         url:"http://localhost:8888/Admin/pages/clavier/fetch.php",
@@ -233,6 +244,7 @@ include('../../includes/navbar.php');
                 var dataTable = $('#souris_data').DataTable({
                     "processing":true,
                     "serverSide":true,
+                    "language": { "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"},
                     "order":[],
                     "ajax":{
                         url:"http://localhost:8888/Admin/pages/souris/fetch.php",
